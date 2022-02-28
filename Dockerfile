@@ -42,11 +42,11 @@ FROM alpine:${ALPINE_VERSION}
 #LABEL org.opencontainers.image.licenses="Apache-2.0"
 #LABEL hugo_version=$VERSION
 
-#USER hugo
+USER hugo
 
 #WORKDIR /src
 
 #EXPOSE 1313
 
-#HEALTHCHECK --interval=10s --timeout=10s --start-period=15s \
-#  CMD hugo env || exit 1
+HEALTHCHECK --interval=10s --timeout=10s --start-period=15s \
+  CMD hugo env || exit 1
