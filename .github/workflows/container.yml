@@ -6,11 +6,11 @@ jobs:
     steps:
     - uses: actions/checkout@master
 
-    - run: docker build ./docker/ -t scandemo:test
+    - run: docker build ./docker/ -t scandemo:${{ github.sha }}
       
     - uses: Azure/container-scan@v0
       with:
-        image-name: scandemo:test
+        image-name: scandemo:${{ github.sha }}
     
  #   - uses: Azure/docker-login@v1
  #     with:
