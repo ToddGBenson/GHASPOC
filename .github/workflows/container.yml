@@ -4,7 +4,7 @@ jobs:
   build-secure-and-push:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v0
 
     - run: docker build ./docker/ -t scandemo:${{ github.sha }}
       
