@@ -8,9 +8,9 @@ jobs:
 
     - run: docker build . -t k8sdemo:test
       
-  #  - uses: Azure/container-scan@v0
-  #    with:
-  #      image-name: k8sdemo:test
+    - uses: Azure/container-scan@v0
+      with:
+        image-name: k8sdemo:test
     
  #   - uses: Azure/docker-login@v1
  #     with:
