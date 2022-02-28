@@ -42,6 +42,7 @@ LABEL org.opencontainers.image.version=$BUILD_VERSION
 LABEL org.opencontainers.image.licenses="Apache-2.0"
 LABEL hugo_version=$VERSION
 
+
 USER hugo
 
 WORKDIR /src
