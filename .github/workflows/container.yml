@@ -6,11 +6,11 @@ jobs:
     steps:
     - uses: actions/checkout@master
 
-    - run: docker build . -t k8sdemo:test
+    - run: docker build ./docker/Dockerfile -t k8sdemo:test
       
-  #  - uses: Azure/container-scan@v0
-  #    with:
-  #      image-name: k8sdemo:test
+    - uses: Azure/container-scan@v0
+      with:
+        image-name: k8sdemo:test
     
  #   - uses: Azure/docker-login@v1
  #     with:
