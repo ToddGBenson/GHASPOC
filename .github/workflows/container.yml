@@ -12,10 +12,10 @@ jobs:
       with:
         image-name: contoso.azurecr.io/k8sdemo:${{ github.sha }}
     
-    - uses: Azure/docker-login@v1
-      with:
-        login-server: contoso.azurecr.io
-        username: ${{ secrets.REGISTRY_USERNAME }}
-        password: ${{ secrets.REGISTRY_PASSWORD }}
-    
-    - run: docker push contoso.azurecr.io/k8sdemo:${{ github.sha }}
+ #   - uses: Azure/docker-login@v1
+ #     with:
+ #       login-server: contoso.azurecr.io
+ #       username: ${{ secrets.REGISTRY_USERNAME }}
+ #       password: ${{ secrets.REGISTRY_PASSWORD }}
+ #   
+ #   - run: docker push contoso.azurecr.io/k8sdemo:${{ github.sha }}
