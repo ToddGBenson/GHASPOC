@@ -13,6 +13,7 @@ __Current issues__
 - Need feedback/Use
 - Azure access and sample pipeline
 - Schedule brainstorm and retro
+- GitHub actions disabled
 
 
 __Solve:__
