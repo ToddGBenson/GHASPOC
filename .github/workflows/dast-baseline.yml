@@ -1,18 +1,19 @@
 on: [push]
 
 jobs:
-  build-secure-and-push:
+  dast-baseline-scan:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-python@v2
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Setup Python
+      uses: actions/setup-python@v2
       with:
         python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
         architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
-    - run: cd python/web && pwd && python3 -m http.server &
-    - name: curl site
-    - run: curl -H "Host: example.com" http://localhost/
+    - name: run webserver
+      run: cd python/web && python3 -m http.server &
     - name: ZAP Scan
       uses: zaproxy/action-baseline@v0.6.1
       with:
-        target: 'http://127.0.0.1'
+        target: 'http://127.0.0.1:8000/index.html'
