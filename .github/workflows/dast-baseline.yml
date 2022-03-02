@@ -9,9 +9,9 @@ jobs:
       with:
         python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
         architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
-    - run: pwd && ls && python3 -m http.server &
+    - run: cd python/web && pwd && python3 -m http.server &
+    - run: curl -H "Host: example.com" http://localhost/
     - name: ZAP Scan
       uses: zaproxy/action-baseline@v0.6.1
       with:
-        target: 'https://127.0.0.1'
-
+        target: 'http://127.0.0.1'
