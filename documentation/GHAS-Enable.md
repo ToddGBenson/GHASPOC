@@ -17,7 +17,9 @@
 
 ![](Aspose.Words.82e4a104-020e-43b6-b71e-830464967419.004.png)
 ## SAST (Static Analysis Testing)
-Sriram
+1) Go to Security and enable code scanning alerts
+![image](https://user-images.githubusercontent.com/8188211/156360110-4ddabc75-5153-4db8-908f-08cfc5a52dc6.png)
+
 ## Secrets
 1) Select ‘Settings’
 
