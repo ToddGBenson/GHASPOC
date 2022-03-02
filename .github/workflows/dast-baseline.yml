@@ -13,7 +13,11 @@ jobs:
         architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
     - name: run webserver
       run: cd python/web && ifconfig && pwd && ls && python3 -m http.server &
-    - name: Check server
+    - name: Check server - 10
+      run: curl http://10.1.1.0/index.html
+    - name: Check server - 172
+      run: curl http://172.17.0.1/index.html
+    - name: Check server - local
       run: curl http://127.0.0.1/index.html
     - name: ZAP Scan
       uses: zaproxy/action-baseline@v0.6.1
