@@ -1,20 +1,17 @@
 Goal: Document manual steps to enable security controls via GitHub Advanced Security
 Document steps to manually configure and enable:
--	GitHub branch protections (Custom) - TB
--	SAST (GHAS) - SR
--	SCA (GHAS) - TB
--	Secrets Scanning (GHAS) - YS
--	DAST (Actions) - SR
-  OWASP ZAP API Scan · Actions · GitHub Marketplace|https://github.com/marketplace/actions/owasp-zap-api-scan]
--	Container (Actions) - YS
--	Terraform (Actions) - TB
+-	GitHub branch protections (Custom) 
+-	SAST (GHAS)
+-	SCA (GHAS) 
+-	Secrets Scanning (GHAS)
+-	DAST (Actions) 
+-	Container (Actions) 
+-	Terraform (Actions) 
 
 __Current issues__
 - Need feedback/Use
-- Azure access and sample pipeline
-- Schedule brainstorm and retro
-- GitHub actions disabled
-
+- Azure access and sample pipeline (Requested)
+- GitHub actions disabled (requested)
 
 __Solve:__
 - IDE
@@ -27,12 +24,10 @@ __Solve:__
 - Code Signing
 - on Merge to Main
 - Update documentation
-- How to run GitHub commands from the CLI
 - Alerts and reporting?
 - Create CLI automation for above manual steps
 - Resolve errors on scans not needed
-
-__Done__
+- Dependabot, secrets, and code scanning to break thge build
 
 __Other tools to integrate__
 - Checkmarx - SAST
