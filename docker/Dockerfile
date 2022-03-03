@@ -19,20 +19,20 @@ ENV VERSION 0.64.0
 WORKDIR /usr/local/src
 SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
 
-RUN wget \
-  https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_${VERSION}_Linux-64bit.tar.gz
+#RUN wget \
+#  https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_${VERSION}_Linux-64bit.tar.gz
 
-RUN wget \
-  https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_${VERSION}_checksums.txt \
-    && sed -i '/hugo_[0-9].*Linux-64bit.tar.gz/!d' \
-       hugo_${VERSION}_checksums.txt \
-    && sha256sum -cs hugo_${VERSION}_checksums.txt \
-    && tar -xzvf hugo_"${VERSION}"_Linux-64bit.tar.gz \
+#RUN wget \
+#  https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_${VERSION}_checksums.txt \
+#    && sed -i '/hugo_[0-9].*Linux-64bit.tar.gz/!d' \
+#       hugo_${VERSION}_checksums.txt \
+#    && sha256sum -cs hugo_${VERSION}_checksums.txt \
+#    && tar -xzvf hugo_"${VERSION}"_Linux-64bit.tar.gz \
 
-    && mv hugo /usr/local/bin/hugo \
+#    && mv hugo /usr/local/bin/hugo \
 
-    && addgroup -Sg 1000 hugo \
-    && adduser -SG hugo -u 1000 -h /src hugo
+#    && addgroup -Sg 1000 hugo \
+#    && adduser -SG hugo -u 1000 -h /src hugo
 
 LABEL org.opencontainers.image.create_date=$CREATE_DATE
 LABEL org.opencontainers.image.title="hugo_builder"
